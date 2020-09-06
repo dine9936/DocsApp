@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SelectLoactionActivity"
+    android:orientation="vertical">
+<androidx.appcompat.widget.Toolbar
+    android:elevation="4dp"
+    app:contentInsetStartWithNavigation="0dp"
+    app:contentInsetStart="0dp"
+    android:id="@+id/toolbar_select_location"
+    app:navigationIcon="@drawable/ic_baseline_chevron_left_24"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/toolbar_text_select_location"
+            android:gravity="start|center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Search for your city"/>
+    </RelativeLayout>
+</androidx.appcompat.widget.Toolbar>
+    <Button
+        android:id="@+id/pick_my_current_location"
+        android:layout_marginTop="5dp"
+        android:elevation="4dp"
+        android:text="Pick my current location"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="normal"
+        android:textAlignment="textStart"
+        android:paddingLeft="8dp"
+        android:drawablePadding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_my_location"
+        android:background="@android:color/transparent"
+        android:gravity="start|center" />
+    <androidx.core.widget.NestedScrollView
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_gravity="fill_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Popular Cities"
+                    android:textColor="@android:color/black"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:padding="12dp"
+                android:background="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:id="@+id/recycler_popular_city"
+                    android:layout_height="match_parent"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Other Cities"
+                    android:textColor="@android:color/black"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:padding="12dp"
+                android:background="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_other_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

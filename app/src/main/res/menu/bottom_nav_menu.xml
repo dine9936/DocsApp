@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:menuCategory="secondary"
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
+    <item
+        android:menuCategory="secondary"
+        android:id="@+id/consultsFragment"
+        android:icon="@drawable/ic_consults"
+        android:title="Consults" />
+    <item
+        android:menuCategory="secondary"
+        android:id="@+id/rewardFragment"
+        android:icon="@drawable/ic_reward"
+        android:title="Reward" />
+    <item
+        android:menuCategory="secondary"
+        android:id="@+id/familyFragment"
+        android:icon="@drawable/ic_family"
+        android:title="Family" />
+</menu>

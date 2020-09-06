@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.docsapp.HomeFragment"
+
+        tools:layout="@layout/home_fragment" />
+    <fragment
+
+        android:id="@+id/consultsFragment"
+        android:name="com.example.docsapp.ConsultsFragment"
+        tools:layout="@layout/consults_fragment" />
+    <fragment
+
+        android:id="@+id/rewardFragment"
+        android:name="com.example.docsapp.RewardsFragment"
+        tools:layout="@layout/rewards_fragment" />
+    <fragment
+
+        android:id="@+id/familyFragment"
+        android:name="com.example.docsapp.FamilyFragment"
+        tools:layout="@layout/family_fragment" />
+
+
+</navigation>

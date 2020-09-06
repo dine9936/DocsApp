@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/containero"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        app:elevation="0dp"
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<!--        android:theme="@style/AppTheme.AppBarOverlay">-->
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_marginStart="0dp"
+            app:contentInsetStartWithNavigation="0dp"
+            android:elevation="0dp"
+            android:id="@+id/toolbar_main"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/white"
+            android:layout_marginLeft="0dp">
+<!--            app:popupTheme="@style/AppTheme.PopupOverlay">-->
+<LinearLayout
+    android:weightSum="2"
+    android:layout_marginLeft="0dp"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:gravity="start|center"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/select_location"
+            android:gravity="center_vertical"
+            android:drawableRight="@drawable/ic_arrow"
+            android:drawableLeft="@drawable/ic_location"
+            android:layout_marginLeft="0dp"
+            android:textSize="14sp"
+            android:background="@android:color/transparent"
+            android:textColor="#acacac"
+            android:textStyle="normal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Select City"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:gravity="end|center"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageButton
+            android:id="@+id/support"
+            android:layout_marginRight="10sp"
+            android:src="@drawable/ic_support"
+            android:background="@android:color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </RelativeLayout>
+
+</LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <include
+        layout="@layout/content_main"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

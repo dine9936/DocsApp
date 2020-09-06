@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "350586010651",
+    "firebase_url": "https://docsapp-aa4eb.firebaseio.com",
+    "project_id": "docsapp-aa4eb",
+    "storage_bucket": "docsapp-aa4eb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:350586010651:android:80aa4ab49a903ad5468cbe",
+        "android_client_info": {
+          "package_name": "com.example.docsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "350586010651-36mev2tg2mvhqv8aijmjh7eus9apqp9e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBO2mZNbupV5Ohzs7EJMQ2D4vKp77gdZ2A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "350586010651-36mev2tg2mvhqv8aijmjh7eus9apqp9e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

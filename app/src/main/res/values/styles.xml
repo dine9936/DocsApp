@@ -1,0 +1,65 @@
+<resources>
+    <!-- Base application theme. -->
+
+    <style name="MyMaterialTheme" parent="MyMaterialTheme.Base">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+
+    </style>
+
+    <style name="MyMaterialTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+
+    </style>
+
+    <style name="DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@color/colorPrimary</item>
+    </style>
+
+
+
+
+    <style name="SimpleSearchViewStyle">
+        <!-- Change search style -->
+<!--        <item name="type">card</item>-->
+
+<!--        &lt;!&ndash; Change search hint &ndash;&gt;-->
+<!--        <item name="android:hint">Sample</item>-->
+
+<!--        &lt;!&ndash; Change search inputType &ndash;&gt;-->
+<!--        <item name="android:inputType">text</item>-->
+
+        <!-- Change search textColor -->
+<!--        <item name="android:textColor">@color/sample</item>-->
+
+<!--        &lt;!&ndash; Search bar/card background &ndash;&gt;-->
+<!--        <item name="searchBackground">@drawable/sample</item>-->
+
+        <!-- Change icons -->
+        <item name="searchBackIcon">@drawable/ic_baseline_chevron_left_24</item>
+<!--        <item name="searchClearIcon">@drawable/sample</item>-->
+<!--        <item name="searchVoiceIcon">@drawable/sample</item>-->
+
+        <!-- Change icons tint -->
+<!--        <item name="backIconTint">1</item>-->
+<!--        <item name="iconsTint">1</item>-->
+
+        <!-- Change icons alpha -->
+<!--        <item name="backIconAlpha">0.8</item>-->
+<!--        <item name="iconsAlpha">0.8</item>-->
+
+<!--        &lt;!&ndash; Change search input colors &ndash;&gt;-->
+<!--        <item name="cursorColor">@color/sample</item>-->
+<!--        <item name="hintColor">@color/sample</item>-->
+
+        <!-- Enable voice search -->
+<!--        <item name="voiceSearch">true</item>-->
+
+<!--        &lt;!&ndash; Set voice search prompt &ndash;&gt;-->
+<!--        <item name="voiceSearchPrompt">Sample</item>-->
+    </style>
+</resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <group android:checkableBehavior="single">
+        <item
+
+            android:id="@+id/cashFragment"
+            android:icon="@drawable/ic_cash"
+            android:title="DoscApp Cash" />
+        <item
+
+            android:id="@+id/couponsFragment"
+            android:icon="@drawable/ic_baseline_money_24"
+            android:title="My Coupons" />
+
+        <item
+
+            android:id="@+id/medicalRecordFragment"
+            android:icon="@drawable/ic_baseline_history_24"
+            android:title="My Medical Record" />
+        <item
+
+            android:id="@+id/bookLabTestFragment"
+            android:icon="@drawable/ic_baseline_bookmark_24"
+            android:title="Book Lab Tests"/>
+
+        <item
+
+            android:id="@+id/contactFragment"
+            android:icon="@drawable/ic_baseline_call_24"
+            android:title="Contact Us"/>
+    <item
+        android:icon="@drawable/ic_baseline_exit_to_app_24"
+        android:title="Log Out"
+        android:id="@+id/nav_log"/>
+    </group>
+
+</menu>

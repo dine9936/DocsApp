@@ -5,16 +5,12 @@ import android.content.ComponentName;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.telephony.PhoneNumberUtils;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -104,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
 
                 layout.setVisibility(View.GONE);
                 drawer.closeDrawer(GravityCompat.START);
-                Intent intent = new Intent(MainActivity.this, BookAtc.class);
+                Intent intent = new Intent(MainActivity.this, TypelabtestAct.class);
                 startActivity(intent);            }
         });
 

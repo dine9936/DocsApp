@@ -38,6 +38,9 @@ public class MedicalRecordAd extends RecyclerView.Adapter<MedicalRecordAd.MyView
 
         MedicalRecordMo medicalRecordMo = medicalRecordMoList.get(position);
         if (medicalRecordMo.getTypecard().equals("co")){
+            holder.llco.setVisibility(View.VISIBLE);
+            holder.lltest.setVisibility(View.GONE);
+
             holder.dateco.setText(medicalRecordMo.getDateco());
             holder.spec.setText(medicalRecordMo.getDocspec());
             holder.docname.setText(medicalRecordMo.getDocname());
@@ -45,9 +48,12 @@ public class MedicalRecordAd extends RecyclerView.Adapter<MedicalRecordAd.MyView
         }
         else if (medicalRecordMo.getTypecard().equals("test")){
 
+            holder.lltest.setVisibility(View.VISIBLE);
+            holder.llco.setVisibility(View.GONE);
+
             holder.datetest.setText(medicalRecordMo.getDatetest());
             holder.packegename.setText(medicalRecordMo.getPackkagename());
-            holder.price.setText(medicalRecordMo.getPrice());
+            holder.price.setText("₹"+medicalRecordMo.getPrice());
         }
 
 

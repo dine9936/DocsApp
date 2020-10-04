@@ -14,4 +14,33 @@
         app:title="My Coupons"
         app:titleTextAppearance="@style/TextAppearance.AppCompat.Small"
         app:titleTextColor="@android:color/black"/>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_no_coupons"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:tint="@color/colorPrimary"
+            android:layout_gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/coupons"/>
+        <TextView
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sorry! no coupons available..."/>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:visibility="gone"
+        android:layout_below="@+id/toolbar_coupons"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recycler_coupons"
+        />
 </RelativeLayout>

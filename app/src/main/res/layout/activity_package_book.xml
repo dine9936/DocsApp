@@ -5,21 +5,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RecordAct">
+    tools:context=".PackageBook">
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_record"
+        android:id="@+id/toolbar_book_package"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         app:navigationIcon="@drawable/ic_baseline_chevron_left_24"
-        app:title="My Medical Records"
+        app:title="DocsApp Cash"
         app:titleTextAppearance="@style/TextAppearance.AppCompat.Small"
         app:titleTextColor="@android:color/black"/>
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_record"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/toolbar_record"
-        android:padding="5dp"
-        tools:itemCount="12"
-        tools:listitem="@layout/card_consults"/>
+
+    <include
+        android:layout_margin="10dp"
+        layout="@layout/card_book_package"
+        android:layout_below="@+id/toolbar_book_package"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+
+
 </RelativeLayout>

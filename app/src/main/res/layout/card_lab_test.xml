@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:layout_margin="5dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="8dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+        <LinearLayout
+            android:id="@+id/ll_card_package"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center|right"
+                android:layout_width="20dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/image_popular"
+                    android:rotation="180"
+                    android:layout_height="match_parent"
+                    android:layout_width="20dp"
+                    android:src="@drawable/popular"
+                   />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:id="@+id/package_image"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/doctor"
+                    />
+                <LinearLayout
+                    android:paddingRight="10dp"
+                    android:paddingLeft="5dp"
+                    android:id="@+id/ll_packege_name"
+                    android:layout_toRightOf="@+id/package_image"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:id="@+id/text_package_name3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:layout_gravity="center"
+                        android:text="Well Being Routine Panel"
+                        android:textColor="@color/colorPrimary"
+                        />
+                    <TextView
+                        android:gravity="right"
+                        android:layout_gravity="right"
+                        android:id="@+id/text_total_tests"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="34 Tests" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:paddingRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@+id/ll_packege_name"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:textSize="10sp"
+
+                        android:id="@+id/text_mrp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Mrp"
+                        android:gravity="right" />
+                    <TextView
+                        android:textSize="10sp"
+                        android:id="@+id/text_tesr_price"
+                        android:layout_width="match_parent"
+                        android:gravity="right"
+                        android:layout_height="wrap_content"
+                        android:text="testprice"
+                        />
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

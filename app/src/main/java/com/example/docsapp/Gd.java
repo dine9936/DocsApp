@@ -3,16 +3,14 @@ package com.example.docsapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
-import com.example.docsapp.Adapters.MedicalRecordAd;
-import com.example.docsapp.Models.MedicalRecordMo;
+import com.example.docsapp.Adapters.LabTestAd;
+import com.example.docsapp.Models.LabTestMo;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -22,45 +20,49 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RecordAct extends AppCompatActivity {
+public class Gd extends AppCompatActivity {
 Toolbar toolbar;
-DatabaseReference reference;
+    DatabaseReference reference;
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
-    private List<MedicalRecordMo> medicalRecordMoList;
-
+    private List<LabTestMo> medicalRecordMoList;
+    DialogLoading loading;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_record);
+        setContentView(R.layout.activity_gd_act);
 
-        reference = FirebaseDatabase.getInstance().getReference("Records");
-        toolbar = findViewById(R.id.toolbar_record);
+        loading = new DialogLoading();
+
+        reference = FirebaseDatabase.getInstance().getReference("LabTests");
+        toolbar = findViewById(R.id.toolbar_book);
+
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        toolbar.setNavigationOnClickListener(view -> onBackPressed());
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
-
-        recyclerView = findViewById(R.id.recycler_record);
+        recyclerView = findViewById(R.id.recycler_book);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         medicalRecordMoList = new ArrayList<>();
-        adapter = new MedicalRecordAd(this, medicalRecordMoList);
+        adapter = new LabTestAd(this, medicalRecordMoList);
         recyclerView.setAdapter(adapter);
 
 
 
 
         readPost();
-
     }
-
-
-
     private void readPost() {
 
+        loading.show(getSupportFragmentManager(),"hello");
         reference.keepSynced(true);
 
 
@@ -69,19 +71,21 @@ DatabaseReference reference;
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                    if (dataSnapshot.exists()) {
+                if (dataSnapshot.exists()) {
+                    loading.dismiss();
 
-                        medicalRecordMoList = new ArrayList<>();
-                        for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
-                            medicalRecordMoList.add(dataSnapshot1.getValue(MedicalRecordMo.class));
-                        }
-                        adapter = new MedicalRecordAd(RecordAct.this, medicalRecordMoList);
-                        recyclerView.setAdapter(adapter);
-
-                    } else {
-
+                    medicalRecordMoList = new ArrayList<>();
+                    for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
+                        medicalRecordMoList.add(dataSnapshot1.getValue(LabTestMo.class));
                     }
+                    adapter = new LabTestAd(Gd.this, medicalRecordMoList);
+                    recyclerView.setAdapter(adapter);
+
+                } else {
+                    loading.dismiss();
+
                 }
+            }
 
 
             @Override

@@ -5,7 +5,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-<uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,11 +14,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/MyMaterialTheme">
-        <activity android:name=".Support"></activity>
+        <activity android:name=".ThyrocareChild"></activity>
+        <activity android:name=".Rapid" />
+        <activity android:name=".Thyrocare" />
+        <activity android:name=".TypelabtestAct" />
+        <activity android:name=".ConsultAct" />
+        <activity android:name=".PackageBook" />
+        <activity android:name=".Support" />
         <activity android:name=".ContactAct" />
         <activity android:name=".PrivacyAct" />
         <activity android:name=".TermsAct" />
-        <activity android:name=".BookAtc" />
+        <activity android:name=".Gd" />
         <activity android:name=".RecordAct" />
         <activity android:name=".CouponsAct" />
         <activity android:name=".CashAct" />

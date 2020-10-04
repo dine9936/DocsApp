@@ -84,22 +84,24 @@
                     android:background="@android:color/darker_gray"
                     android:layout_alignParentBottom="true"/>
             </RelativeLayout>
-            <TextView
-                android:layout_marginLeft="20dp"
-                android:id="@+id/drawer_cash"
-                android:layout_marginTop="20dp"
-                android:textSize="12sp"
-                android:textColor="@android:color/black"
-                android:paddingRight="10dp"
-                android:drawablePadding="10dp"
-                android:textAlignment="viewStart"
-                android:gravity="start|center"
-                android:background="@android:color/transparent"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:drawableLeft="@drawable/ic_cash"
-                android:text="DocsApp Cash"
-                android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"/>
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/drawer_cash"
+                    android:layout_marginTop="20dp"
+                    android:textSize="12sp"
+                    android:textColor="@android:color/black"
+                    android:paddingRight="10dp"
+                    android:drawablePadding="10dp"
+                    android:textAlignment="viewStart"
+                    android:gravity="start|center"
+                    android:background="@android:color/transparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:drawableLeft="@drawable/ic_cash"
+                    android:text="DocsApp Cash"
+                    android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"/>
+
+
             <TextView
                 android:layout_marginLeft="20dp"
                 android:id="@+id/drawer_coupons"

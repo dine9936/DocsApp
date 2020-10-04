@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    app:cardCornerRadius="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="360dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:background="@drawable/bg_support_ll"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:id="@+id/ll_contact_us_list"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Button
+            android:textAllCaps="false"
+            android:padding="10dp"
+            android:background="@drawable/bg_book_button"
+            android:id="@+id/call_button"
+            android:layout_marginBottom="5dp"
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:textColor="@android:color/white"
+            android:drawablePadding="15dp"
+            android:gravity="center"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:text="Call Now"
+          />
+        <Button
+            android:layout_marginTop="10dp"
+            android:textAllCaps="false"
+            android:padding="10dp"
+            android:background="@drawable/bg_book_button"
+            android:id="@+id/whatsapp_button"
+            android:layout_marginBottom="5dp"
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:textColor="@android:color/white"
+            android:drawablePadding="15dp"
+            android:gravity="center"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:text="WhatsApp"
+            />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

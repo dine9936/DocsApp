@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BookAtc">
+    tools:context=".Gd">
 <androidx.appcompat.widget.Toolbar
     android:id="@+id/toolbar_book"
     android:layout_width="match_parent"
@@ -14,5 +14,9 @@
     app:title="Book Lab Test"
     app:titleTextAppearance="@style/TextAppearance.AppCompat.Small"
    app:titleTextColor="@android:color/black"/>
-
+<androidx.recyclerview.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/recycler_book"
+    android:layout_below="@+id/toolbar_book"/>
 </RelativeLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+      >
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:id="@+id/rl_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/package_image"
+                android:layout_centerInParent="true"
+                android:src="@drawable/doctor"
+                android:layout_width="100dp"
+                android:layout_height="100dp"/>
+            <Button
+                android:id="@+id/button_view_all"
+                android:textColor="@android:color/white"
+                android:text="View All"
+                android:textAllCaps="false"
+                android:background="@drawable/bg_view_all_button"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                />
+        </RelativeLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_below="@+id/rl_image"
+            android:paddingLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+           <androidx.recyclerview.widget.RecyclerView
+               android:id="@+id/recycler_book_package"
+               android:layout_gravity="top"
+               tools:listitem="@layout/item_book_package"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"/>
+           <LinearLayout
+               android:padding="10dp"
+               android:layout_gravity="center|bottom"
+               android:gravity="center|bottom"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+               <TextView
+                   android:textSize="10sp"
+                   android:textStyle="bold"
+                   android:id="@+id/mrp"
+                   android:text="Mrp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+               <TextView
+                   android:textStyle="bold"
+                   android:textSize="10sp"
+                   android:id="@+id/price_text"
+                   android:text="Test Price"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+               <TextView
+                   android:textSize="10sp"
+                   android:textColor="@android:color/holo_red_light"
+                   android:id="@+id/test"
+                   android:text="34 Test"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+
+               <Button
+                   android:id="@+id/button_book_now"
+                   android:textSize="15sp"
+                   android:text="Book Now"
+                   android:textAllCaps="false"
+                   android:textColor="@android:color/white"
+                   android:background="@drawable/bg_book_button"
+                   android:layout_margin="5dp"
+                   android:layout_width="200dp"
+                   android:layout_gravity="center"
+                   android:layout_height="35dp"
+                   />
+           </LinearLayout>
+
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

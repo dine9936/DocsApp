@@ -14,4 +14,25 @@
         app:title="DocsApp Cash"
         app:titleTextAppearance="@style/TextAppearance.AppCompat.Small"
         app:titleTextColor="@android:color/black"/>
+   <LinearLayout
+       android:layout_centerInParent="true"
+       android:orientation="vertical"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content">
+       <ImageView
+           android:tint="@color/colorPrimary"
+           android:layout_gravity="center"
+           android:layout_width="100dp"
+           android:layout_height="100dp"
+           android:src="@drawable/ic_cash"/>
+       <TextView
+           android:layout_gravity="center"
+           android:gravity="center"
+           android:textStyle="bold"
+           android:textSize="20sp"
+           android:textColor="@android:color/darker_gray"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Comming Soon...."/>
+   </LinearLayout>
 </RelativeLayout>

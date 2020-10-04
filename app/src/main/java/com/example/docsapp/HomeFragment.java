@@ -8,12 +8,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import android.os.TestLooperManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.example.docsapp.Adapters.SliderAdapterExample;
 import com.example.docsapp.Models.SliderItem;
@@ -26,11 +24,6 @@ import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnima
 import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.select.Elements;
-
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -53,7 +46,7 @@ public class HomeFragment extends Fragment {
        imageView.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
-               Intent intent = new Intent(getActivity(), BookAtc.class);
+               Intent intent = new Intent(getActivity(), TypelabtestAct.class);
                startActivity(intent);
            }
        });

@@ -1,6 +1,6 @@
 package com.example.docsapp.Models;
 
-public class ThyrocareMo {
+public class RapidxMo {
     private String name;
     private String number;
     private String image;
@@ -29,10 +29,10 @@ public class ThyrocareMo {
         this.number = number;
     }
 
-    public ThyrocareMo() {
+    public RapidxMo() {
     }
 
-    public ThyrocareMo(String name, String number,String image) {
+    public RapidxMo(String name, String number,String image) {
         this.name = name;
         this.number = number;
         this.image = image;

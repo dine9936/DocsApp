@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".BookInfoAct">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_thyrocare_child"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="@drawable/ic_baseline_chevron_left_24"
+        app:title="Book Info"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Small"
+        app:titleTextColor="@android:color/black"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <EditText
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/login_phone_rectangle"
+                android:id="@+id/name"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_marginLeft="20dp"
+                android:layput_marginRight="20dp"
+                android:inputType="textPersonName"
+                android:hint="Name" />
+
+            <EditText
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/login_phone_rectangle"
+                android:id="@+id/age"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layput_marginRight="20dp"
+                android:inputType="number"
+                android:hint="Age"  />
+
+
+            <RadioGroup
+                android:layout_marginBottom="10dp"
+                android:id="@+id/gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_above="@+id/view_below" >
+
+                <RadioButton
+                    android:textColor="@color/colorPrimary"
+                    android:id="@+id/male"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Male" />
+
+                <RadioButton
+                    android:textColor="@color/colorPrimary"
+                    android:id="@+id/female"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Female" />
+
+                <RadioButton
+                    android:textColor="@color/colorPrimary"
+                    android:id="@+id/none"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:layout_height="wrap_content"
+                    android:text="Other" />
+            </RadioGroup>
+
+            <EditText
+                android:layout_marginBottom="10dp"
+                android:paddingLeft="10dp"
+                android:background="@drawable/login_phone_rectangle"
+                android:id="@+id/emailAddress"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layput_marginRight="20dp"
+                android:inputType="textEmailAddress"
+                android:hint="E-mail Id"/>
+
+            <EditText
+                android:layout_marginBottom="10dp"
+                android:paddingLeft="10dp"
+                android:background="@drawable/login_phone_rectangle"
+                android:id="@+id/address"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layput_marginRight="20dp"
+                android:minLines="1"
+                android:maxLines="2"
+                android:hint="Address"
+                android:inputType="textMultiLine" />
+
+
+
+            <EditText
+                android:layout_marginBottom="10dp"
+                android:paddingLeft="10dp"
+                android:background="@drawable/login_phone_rectangle"
+                android:id="@+id/pincode"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layput_marginRight="20dp"
+                android:minLines="1"
+                android:maxLines="2"
+                android:hint="Pin Code"
+                android:inputType="textMultiLine" />
+            <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:id="@+id/spinner1"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                app:smsp_errorText="This is error text. You can show it as single line or multiple lines using attr smsp_multilineError"
+                app:smsp_floatingLabelColor="#1976D2"
+                app:smsp_floatingLabelText="Floating Label Text"
+                app:smsp_hint="Hint Text"
+                app:smsp_hintColor="#388E3C"
+                app:smsp_itemColor="#512DA8"
+                app:smsp_itemListColor="#7C4DFF"
+                app:smsp_itemListHintBackgroundColor="#808080"
+                app:smsp_itemListHintColor="#FFFFFF"
+                app:smsp_multilineError="false"
+                app:smsp_selectedItemListColor="#FF5252" />
+            <Button
+                android:background="@drawable/login_phone_rectangle"
+                android:id="@+id/submitbutton"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="1dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layput_marginRight="20dp"
+                android:text="Submit" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

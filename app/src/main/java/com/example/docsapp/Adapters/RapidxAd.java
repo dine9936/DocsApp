@@ -7,44 +7,44 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.docsapp.Models.CitiesMo;
+import com.example.docsapp.Models.RapidxMo;
 import com.example.docsapp.Models.ThyrocareMo;
 import com.example.docsapp.R;
+import com.example.docsapp.Rapid;
 import com.example.docsapp.ThyrocareChild;
 
 import java.util.List;
 
-public class ThyrocareAd extends RecyclerView.Adapter<ThyrocareAd.ViewHolder>{
+public class RapidxAd extends RecyclerView.Adapter<RapidxAd.ViewHolder> {
     public Context mContext;
-    public List<ThyrocareMo> thyrocareMoList;
+    public List<RapidxMo> thyrocareMoList;
 
-    public ThyrocareAd(Context mContext, List<ThyrocareMo> thyrocareMos) {
+    public RapidxAd(Context mContext, List<RapidxMo> thyrocareMoList) {
         this.mContext = mContext;
-        this.thyrocareMoList = thyrocareMos;
+        this.thyrocareMoList = thyrocareMoList;
     }
 
     @NonNull
     @Override
-    public ThyrocareAd.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view  = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_thyrocare,parent,false);
-        return new ThyrocareAd.ViewHolder(view);
+    public RapidxAd.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_lab_test,parent,false);
+
+        return new RapidxAd.ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ThyrocareAd.ViewHolder holder, int position) {
-        final ThyrocareMo thyrocareMo = thyrocareMoList.get(position);
+    public void onBindViewHolder(@NonNull RapidxAd.ViewHolder holder, int position) {
+        final RapidxMo thyrocareMo = thyrocareMoList.get(position);
         holder.name.setText(thyrocareMo.getName());
         holder.number.setText(thyrocareMo.getNumber());
         holder.ll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                Intent intent = new Intent(mContext, ThyrocareChild.class);
+                Intent intent = new Intent(mContext, Rapid.class);
                 intent.putExtra("image",thyrocareMo.getImage());
                 mContext.startActivity(intent);
             }
@@ -54,6 +54,7 @@ public class ThyrocareAd extends RecyclerView.Adapter<ThyrocareAd.ViewHolder>{
     @Override
     public int getItemCount() {
         return thyrocareMoList.size();
+
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

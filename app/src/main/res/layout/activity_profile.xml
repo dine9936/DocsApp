@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ProfileActivity">
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_profile"
         android:layout_width="match_parent"
@@ -13,5 +14,53 @@
         app:navigationIcon="@drawable/ic_baseline_chevron_left_24"
         app:title="Profile"
         app:titleTextAppearance="@style/TextAppearance.AppCompat.Small"
-        app:titleTextColor="@android:color/black"/>
+        app:titleTextColor="@android:color/black" />
+
+    <TextView
+        android:layout_marginTop="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/toolbar_profile"
+        android:textStyle="bold"
+        android:id="@+id/id"
+        android:layout_margin="5dp"
+        android:text="Id:1234567890"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_below="@+id/id"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/name"
+            android:layout_margin="5dp"
+            android:text="D**** ****"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/phone"
+            android:layout_margin="5dp"
+            android:text="+91 97********"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/email"
+            android:layout_margin="5dp"
+            android:text="di*****23@gmail.com"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+
 </RelativeLayout>
+
+

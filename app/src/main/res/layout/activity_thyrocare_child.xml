@@ -13,42 +13,58 @@
         app:title="Thyrocare"
         app:titleTextAppearance="@style/TextAppearance.AppCompat.Small"
         app:titleTextColor="@android:color/black"/>
+<TextView
+    android:textSize="16sp"
+    android:textStyle="bold"
+    android:layout_centerHorizontal="true"
+    android:layout_below="@+id/toolbar_thyrocare_child"
+    android:text="name"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/name"/>
+    <LinearLayout
+        android:layout_below="@+id/name"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <com.jsibbold.zoomage.ZoomageView
+            android:layout_below="@+id/name"
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:src="@drawable/doctor"
+            app:zoomage_restrictBounds="false"
+            app:zoomage_animateOnReset="true"
+            app:zoomage_autoResetMode="UNDER"
+            app:zoomage_autoCenter="true"
+            app:zoomage_zoomable="true"
+            app:zoomage_translatable="true"
+            app:zoomage_minScale="0.6"
+            app:zoomage_maxScale="8"
+            />
+        <TextView
 
-    <com.jsibbold.zoomage.ZoomageView
-        android:layout_below="@+id/toolbar_thyrocare_child"
-        android:id="@+id/image"
-        android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:src="@drawable/doctor"
-        app:zoomage_restrictBounds="false"
-        app:zoomage_animateOnReset="true"
-        app:zoomage_autoResetMode="UNDER"
-        app:zoomage_autoCenter="true"
-        app:zoomage_zoomable="true"
-        app:zoomage_translatable="true"
-        app:zoomage_minScale="0.6"
-        app:zoomage_maxScale="8"
-        />
-    <TextView
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:layout_below="@+id/image"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:text="234 Tests"
+            android:textSize="16sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/number"/>
+        <TextView
+            android:id="@+id/pricee"
+            android:textStyle="bold"
+            android:layout_below="@+id/number"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:text="Rs. 247"
+            android:textSize="16sp"
+            android:layout_height="wrap_content"
+            />
 
-        android:textStyle="bold"
-        android:layout_below="@+id/image"
-        android:layout_width="match_parent"
-        android:gravity="center"
-        android:text="234 Tests"
-        android:textSize="16sp"
-        android:layout_height="wrap_content"
-        android:id="@+id/number"/>
-    <TextView
-        android:layout_marginTop="10dp"
-        android:textStyle="bold"
-        android:layout_below="@+id/number"
-        android:layout_width="match_parent"
-        android:gravity="center"
-        android:text="Rs. 247"
-        android:textSize="16sp"
-        android:layout_height="wrap_content"
-       />
+    </LinearLayout>
 
     <Button
         android:text="Book Test"

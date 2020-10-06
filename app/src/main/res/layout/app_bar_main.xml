@@ -31,25 +31,7 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <RelativeLayout
-        android:gravity="start|center"
-        android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
-            android:id="@+id/select_location"
-            android:gravity="center_vertical"
-            android:drawableRight="@drawable/ic_arrow"
-            android:drawableLeft="@drawable/ic_location"
-            android:layout_marginLeft="0dp"
-            android:textSize="14sp"
-            android:background="@android:color/transparent"
-            android:textColor="#acacac"
-            android:textStyle="normal"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Select City"/>
-    </RelativeLayout>
+
 
     <RelativeLayout
         android:gravity="end|center"

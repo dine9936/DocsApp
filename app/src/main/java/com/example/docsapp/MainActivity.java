@@ -53,13 +53,7 @@ public class MainActivity extends AppCompatActivity {
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
 
-        findViewById(R.id.select_location).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, SelectLoactionActivity.class);
-                startActivity(intent);
-            }
-        });
+
         drawer = findViewById(R.id.drawer_layout);
 
         navigationView = findViewById(R.id.navigation_drawer);

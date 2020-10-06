@@ -4,6 +4,15 @@ public class ThyrocareMo {
     private String name;
     private String number;
     private String image;
+    private String price;
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
 
     public String getImage() {
         return image;
@@ -32,9 +41,10 @@ public class ThyrocareMo {
     public ThyrocareMo() {
     }
 
-    public ThyrocareMo(String name, String number,String image) {
+    public ThyrocareMo(String name, String number,String image,String price) {
         this.name = name;
         this.number = number;
         this.image = image;
+        this.price = price;
     }
 }

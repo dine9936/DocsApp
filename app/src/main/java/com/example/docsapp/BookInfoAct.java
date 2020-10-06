@@ -5,24 +5,106 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.chivorn.smartmaterialspinner.SmartMaterialSpinner;
+import com.example.docsapp.Models.CustomerInfo;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class BookInfoAct extends AppCompatActivity {
-    private SmartMaterialSpinner spProvince;
+    private SmartMaterialSpinner<String> spProvince;
     private SmartMaterialSpinner spEmptyItem;
     private List<String> provinceList;
+    private EditText editTextname,editTextage,editTextemail,editTextAddress,editTextPincode,editTextPhone,editTextdiscount;
+    private Button button;
 
+    FirebaseDatabase database;
+    DatabaseReference reference;
+
+    FirebaseUser user;
+
+    RadioGroup radioGroup;
+    RadioButton radioButton;
+    String gender;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_info);
 
+
+        radioGroup = findViewById(R.id.gender);
+
+
+        String namee = getIntent().getStringExtra("name");
+        database = FirebaseDatabase.getInstance();
+        reference = database.getReference();
+
+        user = FirebaseAuth.getInstance().getCurrentUser();
+
         initSpinner();
+
+        editTextname = findViewById(R.id.name);
+        editTextemail = findViewById(R.id.emailAddress);
+        editTextAddress = findViewById(R.id.address);
+        editTextdiscount  = findViewById(R.id.discount);
+
+
+        editTextPincode = findViewById(R.id.pincode);
+
+        editTextage = findViewById(R.id.age);
+        editTextPhone = findViewById(R.id.phone);
+
+        button = findViewById(R.id.submitbutton);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final int id = radioGroup.getCheckedRadioButtonId();
+
+
+                radioButton = (RadioButton) findViewById(id);
+                gender = radioButton.getText().toString();
+                String name = editTextname.getText().toString().trim();
+                String email = editTextemail.getText().toString().trim();
+                String pincode = editTextPincode.getText().toString().trim();
+                String address = editTextAddress.getText().toString().trim();
+                String age = editTextage .getText().toString().trim();
+                String phone = editTextPhone.getText().toString().trim();
+
+                String discount = editTextdiscount.getText().toString();
+
+
+
+
+                CustomerInfo customerInfo = new CustomerInfo();
+                customerInfo.setUserEmail(email);
+                customerInfo.setUserName(name);
+                customerInfo.setPincode(pincode);
+                customerInfo.setAddress(address);
+                customerInfo.setUserPhone(phone);
+                customerInfo.setAge(age);
+                customerInfo.setPackagename(namee);
+
+                customerInfo.setDiscount(discount);
+                customerInfo.setGender(gender);
+
+
+
+                if (!name.equals("") && !email.equals("") && !pincode.equals("") && !address.equals("") && age.equals("") && !phone.equals("")){
+                    reference.child("BookedPatient").child(user.getPhoneNumber()).setValue(customerInfo);
+                }
+            }
+        });
+
     }
 
     private void initSpinner() {

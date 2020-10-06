@@ -46,6 +46,9 @@ public class ThyrocareAd extends RecyclerView.Adapter<ThyrocareAd.ViewHolder>{
 
                 Intent intent = new Intent(mContext, ThyrocareChild.class);
                 intent.putExtra("image",thyrocareMo.getImage());
+                intent.putExtra("price",thyrocareMo.getPrice());
+                intent.putExtra("test",thyrocareMo.getNumber());
+                intent.putExtra("name",thyrocareMo.getName());
                 mContext.startActivity(intent);
             }
         });
